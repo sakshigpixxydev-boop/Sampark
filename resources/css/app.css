@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@import "tom-select/dist/css/tom-select.css";
+@import "tom-select/dist/css/tom-select.default.css";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Primary color palette - #00bde0 */
+    --color-primary-50: #e6f9fd;
+    --color-primary-100: #ccf3fb;
+    --color-primary-200: #99e7f7;
+    --color-primary-300: #66dbf3;
+    --color-primary-400: #33cfef;
+    --color-primary-500: #00bde0;
+    --color-primary-600: #0099b8;
+    --color-primary-700: #00758a;
+    --color-primary-800: #00515c;
+    --color-primary-900: #002d2e;
+}
+
+/* Fix for TomSelect selected item text visibility */
+.ts-control .item {
+    color: #1f2937 !important;
+    /* gray-800 */
+}
+
+/* Fix TomSelect "Box inside Box" Styling Issue */
+/* Strategy: Hide the wrapper's Tailwind styles (which create the outer box) and apply them to the inner control */
+
+/* 1. Reset Wrapper Visuals */
+.ts-wrapper.searchable-select {
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+}
+
+/* 2. Style Inner Control to match standard Tailwind Input (border-gray-300, rounded-lg, px-3 py-2, bg-white) */
+.ts-wrapper.searchable-select .ts-control {
+    border: 1px solid #d1d5db !important;
+    /* gray-300 */
+    border-radius: 0.5rem !important;
+    /* rounded-lg */
+
+    /* Padding: vertical 0.5rem (py-2), left 0.75rem (px-3), right 2rem (for arrow) */
+    padding: 0.5rem 0.75rem !important;
+    padding-right: 2rem !important;
+
+    background-color: white !important;
+    background-image: none !important;
+    /* Remove default theme gradient/image if any */
+    color: #1f2937 !important;
+    /* gray-800 */
+
+    min-height: 42px;
+    /* Standard height for py-2 + line-height */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+    /* shadow-sm */
+
+    display: flex;
+    align-items: center;
+}
+
+/* 3. Handle Focus State (Ring) */
+/* Use the primary color #00bde0 defined in the project */
+.ts-wrapper.searchable-select.focus .ts-control {
+    border-color: transparent !important;
+    box-shadow: 0 0 0 2px #00bde0 !important;
+    outline: none !important;
+}
+
+/* 4. Fix inner input margins */
+.ts-wrapper.searchable-select .ts-control input {
+    margin: 0 !important;
+}
+
+/* 5. Dropdown Menu Styling */
+.ts-wrapper.searchable-select .ts-dropdown {
+    border: 1px solid #d1d5db;
+    /* gray-300 */
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    margin-top: 4px;
+    z-index: 50;
+}

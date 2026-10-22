@@ -1,0 +1,4 @@
+studenttype_id,eduboard_id,std_id,takula_id,fname,mname,lname,email,gender,birthdate
+1,1,1,1,John,Kumar,Doe,john.doe@example.com,M,2000-01-15
+1,1,1,1,Jane,Devi,Smith,jane.smith@example.com,F,2001-05-20
+1,1,2,1,Bob,Singh,Johnson,bob.johnson@example.com,M,1999-12-10

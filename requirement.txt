@@ -1,0 +1,152 @@
+Pramukh Sankalp – School Management 
+1. Role Management
+List Page
+Entry Page
+oRole Name
+oIs Predefined (If set to 1, the role cannot be deleted)
+
+2. Permission Management
+Entry Page
+oPermission Key (e.g., 1000, 1001, 1002)
+oPermission Name / Description
+List Page
+
+
+4. User Registration
+Database Design
+Admin-Side User Registration
+Mandatory Fields
+1.Role Selection
+2.First Name
+3.Password or PIN (or both)
+4.User Type Selection
+5.Username (Email or any unique identifier)
+6.Inactive (Default = 0)
+
+5. Login Module
+Database Design
+Login Options
+oUsername + Password
+oUsername + PIN
+
+6. User Profile
+Features
+oUpdate Profile Information
+oForgot Password / PIN
+oChange Password / PIN
+
+7. Admin Dashboard
+Overview Cards (Clickable for Details)
+oTotal Students
+oTotal Schools
+oTotal Initiators
+Student Payment Section
+oPending Payments (with School Filter)
+New Inquiry Section
+oFilter by Payment Status: Pending / Authorized / Failed
+
+8. Initiator Dashboard
+Overview Cards (Clickable for Details)
+oTotal Students
+oTotal Schools
+Student Payment Section
+oPending Payments (with School Filter)
+New Inquiry Section
+oFilter by Payment Status: Pending / Authorized / Failed
+
+9. School Dashboard
+Overview Cards (Clickable for Details)
+oTotal Students
+Student Payment Section
+oPending Payments (with School Filter)
+New Inquiry Section
+oFilter by Payment Status: Pending / Authorized / Failed
+Note: The dashboard layout and access depend on assigned roles.
+
+10. School Type Management
+Entry Page
+List Page
+
+11. School Board Management
+Entry Page
+List Page
+
+12. School Management
+Entry Page
+oMandatory Fields
+1.School Name
+2.School Type Selection
+3.Education Board Selection
+4.Admin Name
+5.Admin Contact
+6.Inactive (Default = 0)
+7.Status (0 – generate lead , 1 – final Sctool)
+List Page
+
+13. Student Type Management
+Entry Page
+oe.g., Non-BAPS, BAPS, etc.
+List Page
+
+14. Educational Board Management
+Entry Page
+oe.g., GSEB, CBSE, etc.
+List Page
+
+15. Student Access & Management
+Student Entry
+oModes:
+Individual Entry
+Bulk Upload via CSV
+Verification after insertion before saving to the database
+oMandatory Fields:
+Student Type Selection
+Education Board Selection
+Standard Selection
+Taluka Selection
+First Name
+Middle Name
+Last Name
+Email
+Guardian Entry
+oFields:
+Relation Selection
+Entry Page
+List Page
+First Name
+Middle Name
+Last Name
+Student Semester Batch
+oStudent ID
+oSemester Batch Selection
+Entry Page
+List Page
+oStatus (Active / Completed / Dropped / On Hold)
+Invoice Entry
+oSchool / student base on fee plan entry
+oWe have to set discount rule too this is help full to no add extra fee plan just added discount for specific school or student 
+Payment Log
+oStudent ID
+oPayment Mode Selection
+Entry Page
+List Page
+oPayment Date & Time
+oTransaction ID
+Student List Page Filters
+oSchool
+oAssigned User
+oPayment Status
+oCity
+oStandard
+oBoard
+oType
+oetc.
+
+16. Parcel Management
+Student ID
+Parcel Company Selection
+oEntry Page
+oList Page
+Tracking Number
+
+   

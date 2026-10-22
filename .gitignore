@@ -31,3 +31,8 @@ public/user-documents/
 /test_login.php
 /verify_email.php
 /status
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
